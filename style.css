@@ -9,7 +9,7 @@ body{
 }
 header{
     width: 100%;
-    padding: 1rem 2rem 0rem 2rem;
+    padding: .5rem 2rem 0rem 2rem;
     color: rgb(66, 65, 65);
     border-bottom: 1px solid #ccc;
     position: relative;
@@ -62,19 +62,21 @@ li:hover {
     color: rgb(60, 182, 230);
     padding: 0;
 }
+/**********************************************Drop down for FILE*********************************************/
 .drop_down{
     border: 1px solid rgb(215, 212, 212);
     position: absolute;
     top: 5.3rem;
     width: 12rem;
-    height: 20vh;
+    height: 10rem;
     border-radius: 5px;
     display: none;
 }
-.file,.request_edit{
+/**********************************************TOOLTIP PART*****************************************************/
+.file,.request_edit,.video_icon{
     position: relative;
 }
-.file::after,.request_edit::after {
+.file::after,.request_edit::after,.video_icon::after {
     position: absolute;
     width: 8rem;
     background-color: rgb(58, 58, 58);
@@ -93,7 +95,12 @@ li:hover {
     height: 2rem;
     bottom: -4.5em;
 }
-.file::before,.request_edit::before{
+.video_icon::after{
+    width: 11rem;
+    height: 1.3rem;
+    bottom: -3.8em;
+}
+.file::before,.request_edit::before,.video_icon::before{
     position: absolute;
     content: "";
     height: 0;
@@ -110,10 +117,14 @@ li:hover {
     bottom: -1rem;
     left: -5rem;
 }
-.file::after,.file::before,.request_edit::after,.request_edit::before{
+.video_icon::before{
+    bottom: -1rem;
+    left: -1rem;
+}
+.file::after,.file::before,.request_edit::after,.request_edit::before,.video_icon::after,.video_icon::before{
     display: none;
 }
-.file:hover::after,.file:hover::before,.request_edit:hover::after,.request_edit:hover::before{
+.file:hover::after,.file:hover::before,.request_edit:hover::after,.request_edit:hover::before,.video_icon:hover::after,.video_icon:hover::before{
     display: block;
 }
 
@@ -185,7 +196,11 @@ left: 2rem;
     font-size: 1.1rem;
     font-weight: bold;
 }
-
+/**********************************************POP UP*********************************************************/
+.pop_up{
+    width: 30%;
+    height: 10rem;
+}
 /***************************************************FOR PHONE VIEW********************************************/
 .phone_bar{
     text-align: center;
@@ -203,13 +218,23 @@ left: 2rem;
     padding: 3rem;
     height: 40vh;
     border-radius: 5px;
+    border: 1px solid rgb(191, 189, 189);
     top: 5.8rem;
     left: 0rem;
     font-size: 1.2rem;
-    background-color: lightseagreen;
-    color: white;
+    box-shadow: 0 5px 15px rgb(0 0 0 0.3);
+    color: black;
     font-weight: bold;
     display: none;
+}
+.special_entry:hover{
+    box-shadow:  0 5px 15px rgb(99, 98, 98);
+}
+
+
+main{
+    height: 100vh;
+    width: 100%;
 }
 /****************************************************MEDIA QUERY FOR PHONE VIEW************************************/
 
@@ -237,7 +262,8 @@ left: 2rem;
 
 }
 
-/*************************************************J.S CSS*************************************************************/
+
+/*********************************************J.S CSS*************************************************************/
 .stars{
     color: goldenrod;
 }
