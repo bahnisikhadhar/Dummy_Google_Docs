@@ -63,7 +63,7 @@ li:hover {
     padding: 0;
 }
 /**********************************************Drop down for FILE*********************************************/
-.drop_down{
+.drop_down,.drop_down1,.drop_down2,.drop_down3,.drop_down4{
     border: 1px solid rgb(215, 212, 212);
     position: absolute;
     top: 5.3rem;
@@ -73,10 +73,10 @@ li:hover {
     display: none;
 }
 /**********************************************TOOLTIP PART*****************************************************/
-.file,.request_edit,.video_icon{
+.file,.request_edit,.video_icon,.share_btn,.google_account,.wolf,.hippo,.star,.drive,.info,.arrowup{
     position: relative;
 }
-.file::after,.request_edit::after,.video_icon::after {
+.file::after,.request_edit::after,.video_icon::after,.share_btn::after,.google_account::after,.wolf::after,.hippo::after,.star::after,.drive::after,.info::after,.arrowup::after{
     position: absolute;
     width: 8rem;
     background-color: rgb(58, 58, 58);
@@ -100,7 +100,44 @@ li:hover {
     height: 1.3rem;
     bottom: -3.8em;
 }
-.file::before,.request_edit::before,.video_icon::before{
+.share_btn::after{
+    width: 13rem;
+    height: 2rem;
+    bottom: -5em;
+}
+.google_account::after{
+    width: 8rem;
+    height: 2rem;
+    bottom: -4.3em;
+    font-size: .9rem;
+    font-weight: bold;
+}
+.wolf::after,.hippo::after{
+    width: 7rem;
+    height: .8rem;
+    bottom: -3em;
+}
+.star::after{
+    width: 2rem;
+    height: .5rem;
+    padding-bottom: 1.2rem;
+    bottom: -2.5em;
+    left: -.8em;
+}
+.drive::after{
+    width: 8rem;
+    height: 1.3rem;
+    padding-top: .5rem;
+    padding-bottom: 1.2rem;
+    bottom: -3.4em;
+    font-size: .98rem;
+}
+.info::after,.arrowup::after{
+    height: 1rem;
+    bottom: -3em;
+    font-size: .98rem;
+}
+.file::before,.request_edit::before,.video_icon::before,.share_btn::before,.google_account::before,.wolf::before,.hippo::before,.star::before,.drive::before,.info::before,.arrowup::before{
     position: absolute;
     content: "";
     height: 0;
@@ -121,10 +158,18 @@ li:hover {
     bottom: -1rem;
     left: -1rem;
 }
-.file::after,.file::before,.request_edit::after,.request_edit::before,.video_icon::after,.video_icon::before{
+.share_btn::before{
+    bottom: -.9rem;
+    left: -.4rem;
+}
+.wolf::before,.hippo::before{
+    bottom: -.7rem;
+    left: -.4rem;
+}
+.file::after,.file::before,.request_edit::after,.request_edit::before,.video_icon::after,.video_icon::before,.share_btn::after,.share_btn::before,.google_account::after,.google_account::before,.wolf::after,.wolf::before,.hippo::after,.hippo::before,.star::after,.star::before,.drive::after,.drive::before,.info::after,.info::before,.arrowup::after,.arrowup::before{
     display: none;
 }
-.file:hover::after,.file:hover::before,.request_edit:hover::after,.request_edit:hover::before,.video_icon:hover::after,.video_icon:hover::before{
+.file:hover::after,.file:hover::before,.request_edit:hover::after,.request_edit:hover::before,.video_icon:hover::after,.video_icon:hover::before,.share_btn:hover::after,.share_btn:hover::before,.google_account:hover::after,.google_account:hover::before,.wolf:hover::after,.wolf:hover::before,.hippo:hover::after,.hippo:hover::before,.star:hover::after,.star:hover::before,.drive:hover::after,.drive:hover::before,.info:hover::after,.info:hover::before,.arrowup:hover::after,.arrowup:hover::before{
     display: block;
 }
 
@@ -189,12 +234,19 @@ left: 2rem;
     color: white;
 }
 .google_account{
-    padding: .8rem 1rem;
-    background-color: orangered;
+    padding: .3rem .5rem;
     border-radius: 50px;
     color: white;
     font-size: 1.1rem;
     font-weight: bold;
+}
+.google_account:hover{
+    background-color: rgb(216, 211, 211);
+}
+.google_account .innerdiv{
+    padding: .8rem 1rem;
+    border-radius: 50px;
+    background-color: orangered;
 }
 /**********************************************POP UP*********************************************************/
 /* .pop_up{
